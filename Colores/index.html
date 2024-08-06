@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Colores</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Color Test</h1>
+      <div id="menu"></div>
+      <div id="game" style="display: none">
+        <a id="back">
+          <img
+            src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLWNpcmNsZS1hcnJvdy1sZWZ0Ij48Y2lyY2xlIGN4PSIxMiIgY3k9IjEyIiByPSIxMCIvPjxwYXRoIGQ9Ik0xNiAxMkg4Ii8+PHBhdGggZD0ibTEyIDgtNCA0IDQgNCIvPjwvc3ZnPg=="
+            alt=""
+        /></a>
+        <div id="game-header">
+          <div>
+            <span id="game-title"> Find the correct color: </span>
+            <span id="game-color"></span>
+          </div>
+          <div id="counter">
+            <span id="counter-title"> 🔥 Streak: </span>
+            <span id="counter-streak">0</span>
+          </div>
+        </div>
+
+        <div id="palette"></div>
+        <div id="loss-message" style="display: none">
+          <span id="game-title"> You Lose :( </span>
+          <div id="loss-menu">
+            <button id="loss-retry">Retry</button>
+            <button id="loss-back">Back</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
