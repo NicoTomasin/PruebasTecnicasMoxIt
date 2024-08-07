@@ -18,13 +18,17 @@ En el nivel 2 `#AA[random][random]`
 
 En el nivel 3 `#[random][random][random]`
 
-Luego de las primeras pruebas, me parecía que la dificultad no era la adecuada y recordé el concepto de [Triada](https://piktochart.com/es/blog/como-elegir-la-paleta-de-colores-parte-ii-herramientas-para-combinar-colores/), [Complementarios](https://es.wikipedia.org/wiki/Colores_complementarios) y [Armonía de tonos](https://educacionplasticayvisual.com/color/armonias-de-color/).
-Tomando esto como referencia, Decidí usar el espacio de color HSL (H = Tono, S = Saturación y L = Luminosidad).
-Esto me ayudo por ejemplo a crear un color random en HSL `randomHslColorGenerator` y en base a el, para el primer nivel agregarle 120° al tono, 120° nace de los ángulos internos del triangulo, esto se puede ver en `generateTriadColors`.
-Similar es el caso para `generateComplementaryColors` en el que genero 3 colores complementarios al primero (random), agregándole 90° a cada tono es decir que cada color va a estar a 0°, 90°, 180° y 270°.
-Finalmente para el nivel difícil decidí de manera arbitraria en la función `generateToneHarmonies`, que por cada color que quería generar `i < 5`, se genere diferente luminosidad, `const newL = Math.max(0, Math.min(100, l + (i - 2) * 10));` me aseguro que se generen valores mayores a 0 y menores a 100, ya que en hsl, luminosidad acepta como máximo 100% y ademas al tener `l + (i - 2) * 10)` para asegurarse de generar valores para L inferiores y mayores al original.
+Luego de las primeras pruebas, me parecía que la dificultad no era la adecuada y recordé el concepto de [Triada](https://piktochart.com/es/blog/como-elegir-la-paleta-de-colores-parte-ii-herramientas-para-combinar-colores/), [Complementarios](https://es.wikipedia.org/wiki/Colores_complementarios) y [Armonía de tonos](https://educacionplasticayvisual.com/color/armonias-de-color/), en base a eso comence a trabajar con el espacio de color HSL (H = Tono, S = Saturación y L = Luminosidad).
 
-Todo este flujo cierra cuando `generateDivs` crear la paleta que se mostrara en el HTML de manera aleatoria para que la respuesta correcta no sea siempre el primer item. Ademas a partir de este flujo y debido al requerimiento de mostrar el código HEX para el usuario. Le solicite a [Claude](https://claude.ai/) que cree la función `hslToHex` ya que no logre comprender como hacer la equivalencia entre un espacio y el otro.
+A nivel codigo, uso la funcion `randomHslColorGenerator` que genera un nuevo color en formato HSL de manera aleatoria que luego sera la base para construir cada nivel.
+
+Para el nivel uno y usando `generateTriadColors`, se le agrega 120° a la H (Tono) del color base obteniendo asi una triada.
+
+Para el nivel dos y usando `generateComplementaryColors`, agrego 90° lo que nos da un cuadrado complementario (4 colores).
+
+Finalmente en el nivel difícil con `generateToneHarmonies`, modifico L (Luminosidad) de a 10% para generar colores muy similares al original.
+
+Todo este flujo cierra cuando `generateDivs` genera la paleta de colores ordenada al azar y uso `hslToHex` para poder mostrar el hex al usuario final.
 
 Luego para lograr un ejercicio mas completo, agregue un contador haciendo que la finalidad del juego sea mantener la racha, un botón para volver al inicio y uno para reiniciar en caso de perder.
 
