@@ -1,20 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Vuelos.Data;
+using Vuelos.Interfaces;
 using Vuelos.Models;
 
 namespace Vuelos.Repository
 {
-    public interface IVuelosRepository
-    {
-        Task<bool> AddAsync(VuelosModel model);
-        Task<IEnumerable<VuelosModel>> GetAllAsync();
-        Task<IEnumerable<string>> GetFlightNumberAsync();
-        Task DeleteFlightAsync(string flightNumber);
-        Task UpdateFlightAsync(VuelosModel model);
-        Task<bool>ExistAnyAsync (string flightNumber);
-        Task<VuelosModel> GetByFlightNumberAsync(string flightNumber);
-    }
-
     public class VuelosRepository : IVuelosRepository
     {
         private readonly VuelosDbContext _context;

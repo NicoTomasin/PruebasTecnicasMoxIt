@@ -1,0 +1,26 @@
+name: Vuelos:BuildAndTest
+on:
+  push:
+    paths-ignore: 
+      - '*.md'
+jobs: 
+  OnPush:
+    runs-on: ubuntu-latest
+    env: 
+      DOTNET_CLI_TELEMETRY_OUTPUT: 1
+      DOTNET_NOLOGO: TRUE
+    steps: 
+    
+      - name: Checkout
+        uses: actions/checkout@v2
+        
+      - name: Setup DotNet Core 8.0
+        uses: actions/setup-dotnet@v1
+        with: 
+          dotnet-version: '8.0'
+          
+      - name: Build with dotnet
+        run: dotnet build Vuelos/Vuelos/Vuelos.sln --configuration Release
+        
+      - name: Test
+        run: dotnet test Vuelos/Vuelos.Test/Vuelos.Test.csproj

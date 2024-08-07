@@ -1,8 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using Vuelos.Models;
-using Vuelos.Repository;
-
+using Vuelos.Interfaces;
 namespace Vuelos.Controllers
 {
 

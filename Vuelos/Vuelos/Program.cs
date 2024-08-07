@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Vuelos.Data;
 using Vuelos.Repository;
+using Vuelos.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
