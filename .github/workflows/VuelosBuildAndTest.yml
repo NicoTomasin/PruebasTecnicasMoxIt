@@ -20,7 +20,7 @@ jobs:
           dotnet-version: '8.0'
           
       - name: Build with dotnet
-        run: dotnet build Vuelos/Vuelos/Vuelos.sln --configuration Release
+        run: dotnet build Vuelos/Vuelos/Vuelos.csproj --configuration Release
         
       - name: Test
         run: dotnet test Vuelos/Vuelos.Test/Vuelos.Test.csproj
