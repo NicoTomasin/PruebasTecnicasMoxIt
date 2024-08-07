@@ -1,0 +1,11 @@
+*.log
+*.vs
+*.user
+*.userosscache
+wwwroot/
+bin/
+obj/
+*.cache
+*.vscode/
+*.log
+Thumbs.db
