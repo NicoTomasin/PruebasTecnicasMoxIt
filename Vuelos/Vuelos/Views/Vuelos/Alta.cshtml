@@ -1,0 +1,34 @@
+﻿@model Vuelos.Models.VuelosModel
+
+@{
+    ViewData["Title"] = "Alta";
+}
+<div class="container">
+    <h1>Alta</h1>
+    <form asp-action="Alta" asp-controller="Vuelos" method="post">
+        <div class="form-group">
+            <label asp-for="CheckIn" class="control-label">Horario de llegada</label>
+            <input asp-for="CheckIn" class="form-control" />
+            <span asp-validation-for="CheckIn" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="FlightNumber" class="control-label">Numero de vuelo</label>
+            <input asp-for="FlightNumber" class="form-control" placeholder="Numero de vuelo p.ej.: AU 2399" />
+            <span asp-validation-for="FlightNumber" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Airline" class="control-label">Aerolinea</label>
+            <input asp-for="Airline" class="form-control" placeholder="Línea Aérea p.ej.: Latam" />
+            <span asp-validation-for="Airline" class="text-danger"></span>
+        </div>
+        <div class="form-check">
+            <input asp-for="IsDelayed" class="form-check-input" />
+            <label asp-for="IsDelayed" class="form-check-label">Esta retrasado</label>
+        </div>
+        <button type="submit" class="btn btn-primary mt-3">Guardar</button>
+    </form>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

@@ -1,0 +1,28 @@
+﻿@model IEnumerable<Vuelos.Models.VuelosModel>
+@{
+    ViewData["Title"] = "Home";
+}
+<div class="container">
+    <h1>Lista de Vuelos</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Numero de Vuelo</th>
+                <th>Horario de Llegada</th>
+                <th>Aerolínea</th>
+                <th>Retrasado</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var vuelo in Model)
+            {
+                <tr>
+                    <td>@vuelo.FlightNumber</td>
+                    <td>@vuelo.CheckIn</td>
+                    <td>@vuelo.Airline</td>
+                    <td>@(vuelo.IsDelayed ? "Sí" : "No")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,26 @@
+﻿@model IEnumerable<string>
+
+@{
+    ViewData["Title"] = "Baja";
+}
+
+<div class="container">
+    <h1>Baja</h1>
+    <form asp-action="Baja" asp-controller="Vuelos" method="post">
+        <div class="form-group">
+            <label for="flightNumber" class="control-label">Número de vuelo</label>
+            <select id="flightNumber" name="flightNumber" class="form-control" required>
+                <option value="">Seleccione un número de vuelo</option>
+                @foreach (var flightNumber in Model)
+                {
+                    <option value="@flightNumber">@flightNumber</option>
+                }
+            </select>
+        </div>
+        <button type="submit" class="btn btn-danger mt-3">Eliminar</button>
+    </form>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
