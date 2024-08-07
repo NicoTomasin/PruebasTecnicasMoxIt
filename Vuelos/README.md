@@ -15,14 +15,14 @@ Este ejercicio me sirvió mucho para profundizar en el uso de viewBag, viewModel
 
 
 
-## Mejoras o cosas que haría diferentes
+## ToDo
 
-- Separación en capas: Actualmente esta dividido en carpetas pero la manera mas limpia de hacerlo seria creado una capa extra para el repository/service y otra para la base de datos y EF.
-- Experimentar con asp + react: Nunca trabaje con estas dos tecnologías en conjunto y siento que es un buen proyecto para hacerlo.
-- Definitivamente mejoraría la UI: No me llevo tan bien con bootstrap, pero me gastaría revertir esa relación.
+- [ ] Separación en capas: Actualmente esta dividido en carpetas pero la manera mas limpia de hacerlo seria creado una capa extra para el repository/service y otra para la base de datos y EF.
+- [ ] Experimentar con asp + react: Nunca trabaje con estas dos tecnologías en conjunto y siento que es un buen proyecto para hacerlo.
+- [ ] Definitivamente mejoraría la UI: No me llevo tan bien con bootstrap, pero me gastaría revertir esa relación.
 
 
 ## Algunas aclaraciones extras
 
-Sin bien el enunciado no especificaba nada, decidí hacer la mayor cantidad de código en ingles para seguir un estándar y posibilitar mayor mantenimiento a futuro.
+Decidí hacer la mayor cantidad de código en ingles para seguir un estándar y posibilitar mayor mantenimiento a futuro.
 Además seguí las nomenclaturas propuestas por net tanto en controladores, vistas y modelos como el uso de `PascalCase` para variables y funciones. 
