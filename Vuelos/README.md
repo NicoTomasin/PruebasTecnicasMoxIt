@@ -19,7 +19,6 @@ Este ejercicio me sirvió mucho para profundizar en el uso de viewBag, viewModel
 
 - Separación en capas: Actualmente esta dividido en carpetas pero la manera mas limpia de hacerlo seria creado una capa extra para el repository/service y otra para la base de datos y EF.
 - Experimentar con asp + react: Nunca trabaje con estas dos tecnologías en conjunto y siento que es un buen proyecto para hacerlo.
-- Pruebas unitarias: Me gastaría agregarle Xunit y configurar un GitHub Actions cada vez que pusheo para que se ejecuten.
 - Definitivamente mejoraría la UI: No me llevo tan bien con bootstrap, pero me gastaría revertir esa relación.
 
 
